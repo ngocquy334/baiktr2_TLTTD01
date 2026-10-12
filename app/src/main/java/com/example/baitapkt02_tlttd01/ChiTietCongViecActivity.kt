@@ -1,5 +1,6 @@
 package com.example.baitapkt02_tlttd01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
