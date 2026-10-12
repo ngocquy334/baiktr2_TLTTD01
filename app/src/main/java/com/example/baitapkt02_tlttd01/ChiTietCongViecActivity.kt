@@ -18,7 +18,6 @@ class ChiTietCongViecActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chi_tiet_cong_viec)
 
-        // ánh xạ view sau setContentView
         txtChiTiet = findViewById(R.id.txtChiTiet)
         btnChinhSua = findViewById(R.id.btnChinhSua)
         chkHoanThanh = findViewById(R.id.chkHoanThanh)
@@ -48,5 +47,12 @@ class ChiTietCongViecActivity : AppCompatActivity() {
             val noiDung = txtChiTiet.text.toString().substringBefore("\nTrạng thái:")
             txtChiTiet.text = "$noiDung\nTrạng thái: $trangThai"
         }
+        val btnHoanThanh = findViewById<Button>(R.id.btnHoanThanh)
+
+        btnHoanThanh.setOnClickListener {
+            CongViec.trangThai = true
+            txtChiTiet.text = CongViec.thongTin()
+        }
+
     }
 }
