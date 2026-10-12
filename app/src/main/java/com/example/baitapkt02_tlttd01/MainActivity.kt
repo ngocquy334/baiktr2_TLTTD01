@@ -4,16 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-data class CongViec(
-    var tenCongViec: String,
-    var moTa: String,
-    var trangThai: Boolean = false
-) {
-    fun thongTin(): String {
-        val status = if (trangThai) "Hoàn thành" else "Chưa hoàn thành"
-        return "Tên: $tenCongViec\nMô tả: $moTa\nTrạng thái: $status"
-    }
-}
+
 
 class MainActivity : AppCompatActivity() {
 
