@@ -13,14 +13,11 @@ class ChiTietCongViecActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chi_tiet_cong_viec)
 
-        // Ánh xạ TextView từ layout
         txtChiTiet = findViewById(R.id.txtChiTiet)
 
-        // Nhận dữ liệu từ Intent
         val ten = intent.getStringExtra("tenCongViec")
         val moTa = intent.getStringExtra("moTaCongViec")
 
-        // Hiển thị dữ liệu
         txtChiTiet.text = "Tên: $ten\nMô tả: $moTa"
     }
 }
