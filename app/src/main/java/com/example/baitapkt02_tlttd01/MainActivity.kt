@@ -32,7 +32,10 @@ class MainActivity : AppCompatActivity() {
         btnTao.setOnClickListener {
             val ten = edtTen.text.toString().trim()
             val moTa = edtMoTa.text.toString().trim()
-
+            if (ten.isEmpty()) {
+                Toast.makeText(this, "Tên công việc không được để trống", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             if (ten.isEmpty()) {
                 Toast.makeText(this, "Tên công việc không được để trống", Toast.LENGTH_SHORT).show()
             } else {
